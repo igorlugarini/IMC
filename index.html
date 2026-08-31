@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator - Professional</title>
+    <script src="front.js" defer></script>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="header">
+                <h1>BMI Calculator</h1>
+                <p class="subtitle">Calculate your Body Mass Index</p>
+            </div>
+            
+            <form class="form-group" onsubmit="event.preventDefault(); calculateIMC();">
+                <div class="input-group">
+                    <label for="weight">Weight</label>
+                    <div class="input-wrapper">
+                        <input type="number" id="weight" placeholder="Enter weight" step="0.1" min="0">
+                        <span class="unit">kg</span>
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <label for="height">Height</label>
+                    <div class="input-wrapper">
+                        <input type="number" id="height" placeholder="Enter height" step="0.01" min="0">
+                        <span class="unit">m</span>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn-calculate">Calculate BMI</button>
+            </form>
+            
+            <div id="result" class="result-container"></div>
+        </div>
+    </div>
+</body>
+</html>
